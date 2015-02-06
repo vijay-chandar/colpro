@@ -12,9 +12,9 @@ default: &default
 
 development:
   <<: *default
-  # database: ncert
-  username: vijay
-  password: vijay
+  database: ncert
+  username: sjit
+  password: 123
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
