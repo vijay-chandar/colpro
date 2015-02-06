@@ -1,10 +1,5 @@
 <!-- Webfonts -->
 <link type="text/css" rel="stylesheet" href='http://fonts.googleapis.com/css?family=Ubuntu:300italic,300,700'  >
-<style>
-	body {
-		padding-top: 45px; /* 45px to make the container go all the way to the bottom of the topbar */
-	}
-</style>
 
 <style>
 	/* Tables */
@@ -80,12 +75,12 @@ table tr:hover {
 	background:#e6e6e6;
 }
 </style>    
-<div class="row bg-main" >
+<div class="col-md-12 bg-white" >
 
 	<!-- breadcrumbline-->
 	<div class="breadcrumbline"></div>
 
-	<div class="span8 bg-white">
+	<div class="col-md-8 bg-white">
 		<div class="inner unright">
 
 
@@ -138,7 +133,7 @@ table tr:hover {
 		<!-- /inner -->
 	</div><!-- /span8 bg-white -->
 
-	<div class="span4 bg-white" >
+	<div class="col-md-4 bg-white" >
 		<div class="inner untop unleft" >	
 			<br>
 			<!-- Our service Text-->
@@ -152,24 +147,31 @@ table tr:hover {
 			<h4><strong><center>IN ASSOCIATION WITH</center></strong></h4>
 			<br>
 			<br>
-			<center><a href="http://www.csi-india.org/" target="_blank"> <img src="images/csi.png" height="100" width="100"/>&nbsp;</center></a>
-
+			<center>
+			<%= link_to image_tag("csi.png"), "http://csi-india.org/" %>
+            </center>
 			<br>
 			<br>
-			<center><a href="http://isrjournals.org/" target="_blank"> <img src="images/isrlogo.png" height="100" width="100"/>&nbsp;</center></a>
+			<center>
+			<%= link_to image_tag("isrlogo.png"), "http://isrjournals.org/" %>
+            </center>
 			<br>
 			<br><br>
 			<h4><strong><center>INDEXING WITH</center></strong></h4>
 			<br>
 			<br><br>
-			<center><a href="http://www.researchgate.net/ target="_blank"> <img src="images/rsr.png"/>&nbsp;</center></a>
+			<center>
+			<%= link_to image_tag("reachgate.png", size:"300x200"), "http://researchgate.net/" %>
+            </center>
 			<br>
 			<br><br>
-			<center><a href="http://scholar.google.co.in/intl/en/scholar/about.html" target="_blank"> <img src="images/google.png"/>&nbsp;</center></a>
+		    <center>
+			<%= link_to image_tag("google.png"), "http://scholar.google.co.in/intl/en/scholar/about.html" %>
+            </center>
 			<br><br>
-
-			<center><a href="http://www.doaj.org/" target="_blank"> <img src="images/doaj.jpg"/>&nbsp;</center></a>
-
+			<center>
+			<%= link_to image_tag("doaj.jpg"), "http://doaj.org" %>
+            </center>
 			<br>   <br>   <br>   <br>
 
 			<a href="http://isrjournals.org/" target="_blank">&nbsp;
@@ -207,29 +209,4 @@ table tr:hover {
 
 	</section><!-- /topspace blackshadow bg-white -->
 	<!-- /container -->
-	<footer>
 
-		<div align="left" style="margin-left:50px; margin-top:25px">
-
-
-			<noscript><a href="http://www.histats.com/" target="_blank"><img  src="../sstatic1.histats.com/01af5.gif?2213193&amp;101" alt="free tracking" border="0"></a></noscript>
-		</div>
-
-		<!-- BEGIN: Powered by Supercounters.com -->
-
-		<div align="center" style="margin-top:-25px">
-
-		</div>
-		<!-- END: Powered by Supercounters.com -->
-		<div align="right" style="margin-top:-35px; margin-right:25px">
-
-			<div id="clustrmaps-widget"></div></a></noscript>
-	<br><br><br>
-</div>
-
-<div class=" copyright"> Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a></div>
-	</footer><!-- End  footer  -->
-
-</body>
-<!-- Mirrored from cse.researchcommunity.in/dates.html by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 24 Jan 2014 12:45:53 GMT -->
-</html>

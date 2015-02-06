@@ -99,6 +99,12 @@ a:hover {
 	text-transform:capitalize;
 	color:#F30;
 }
+html{
+	width: 100%;
+	height: 100%;
+
+
+}
 /*
 ------------------------------------------------------------
 		Blockquote
@@ -426,9 +432,9 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { margin-bottom: 1
 ------------------------------------------------------------
 */
 .inner{ padding: 20px;	}		
-.inner.untop{ padding-top:0px;	}	
+.inner.untop{ padding-top:0px; max-width: 100%; height: auto; vertical-align: middle;	}	
 .inner.unbottom{ padding-bottom:0px;	}	
-.inner.unleft{ padding-left:0px;	}	
+.inner.unleft{ padding-left:0px; max-width: 100%; height: auto; vertical-align: middle;	}	
 .inner.unright{ padding-right:0px;	}	
 .inner.untb{ padding:0px auto!important;	}	
 /*
@@ -864,11 +870,11 @@ ul.list-services p {
 ------------------------------------------------------------
 */
 .ca-menu {
-	width: 300px;
+	width: 406px;
 	text-shadow: 1px 1px 0px #000;
 	-moz-box-shadow:inset 5px 0px 15px #1a1a1a;
 	-webkit-box-shadow:inset 5px 0px 15px #1a1a1a;
-	box-shadow:inset 5px 0px 15px #1a1a1a;
+	box-shadow:inset 0px 5px 45px #1a1a1a;
 	margin: 0;
 }
 .ca-menu li {
@@ -949,7 +955,7 @@ ul.list-services p {
 .ca-sub {
 	font-size: 10px;
 	color: #FFF;
-	display: block;
+	display: lbock;
 	margin-top: -5px;
 	text-transform: capitalize;
 }
