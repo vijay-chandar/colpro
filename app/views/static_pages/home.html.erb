@@ -5,7 +5,7 @@
         padding-top: 45px; /* 45px to make the container go all the way to the bottom of the topbar */
 	  }
 	.slideleft .bg-ma {
-	background-image:url(images/bg_940.jpg);
+	background-image:url(bg_940.jpg);
 	background-repeat: repeat-y;
 	background-position: 10px top;
 }
@@ -147,9 +147,10 @@
 					  <div class="featuedBox">
 						  <div class="imgShow" >
 						  <!--<div class="ribbon-wrapper right"><div class="ribbon">From $99</div></div>-->
-							  <a href="http://isrjournals.org/" target="_blank" class="zoom">
+						  	<%= link_to image_tag("thumbnail-1.jpg",alt: "thumbnail",class: "zoom",width: "100%"),"http://stjosephstechnology.ac.in",class: "zoom" %>
+							  <!--<a href="http://isrjournals.org/" target="_blank" class="zoom">
 								  <img src="images/thumbnail-1.jpg" class="zoom"   alt="thumbnail" width="100%" />
-							  </a>
+							  </a>-->
 						  </div>
 					  </div><!-- End Class featuedBox  --> 
 			  </div>
@@ -176,7 +177,7 @@
                 <table align="center" >
                 <tr>
                 <td><h3 align="Center"><b>Organized  by </b></h3><br>
-				<a href="http://stjosephstechnology.ac.in/"><%= image_tag("sjit.png",alt: "SJIT") %></a></td>
+				<%= link_to image_tag("sjit.png",alt: "SJIT"), "http://stjosephstechnology.ac.in" %></td>
                 </tr>
                 </table></td>
 				<td>
@@ -184,9 +185,9 @@
  <br>
                 <table align="center">
                 <tr>
-                <td><a href="http://www.csi-india.org/"><%=image_tag("csi.png",size: "120x120",alt: "CSI") %></a></td>
+                <td><%= link_to image_tag("csi.png",size: "120x120",alt: "CSI"), "http://www.csi-india.org" %></td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td><a href="http://ieee.org/"><%=image_tag("ieee.jpg",size: "120x120",alt: "IEEE")%></a></td>
+                <td><%= link_to image_tag("ieee.jpg",size: "120x120",alt: "IEEE"), "http://ieee.org/"%></td>
                 </tr>
                 </table>
                 <br>
@@ -197,12 +198,12 @@
                 <br>
 				<table align="center" >
                 <tr>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.researchgate.net/"><%= image_tag("rsr.png") %></a></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to image_tag("rsr.png"),"http://www.researchgate.net/" %></td>
 				                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								                 <td><a href="http://www.doaj.org/"><%=image_tag ("doaj.jpg") %></a></td>                 
+								                 <td><%=link_to image_tag("doaj.jpg"),"http://doaj.org" %></td>                 
 				                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp </td>
 
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://scholar.google.co.in/intl/en/scholar/about.html"><%= image_tag("google.png") %></a></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<%=link_to image_tag("google.png"),"http://scholar.google.co.in/intl/en/scholar/about.html" %></td>
 				                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp </td>
                 </tr>
                 </table>
