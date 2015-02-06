@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @registration.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @registration.last_name %>
+</p>
+
+<p>
+  <strong>College name:</strong>
+  <%= @registration.college_name %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @registration.department %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @registration.email %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @registration.mobile_number %>
+</p>
+
+<p>
+  <strong>Type of conference:</strong>
+  <%= @registration.type_of_conference %>
+</p>
+
+<p>
+  <strong>Paper title:</strong>
+  <%= @registration.paper_title %>
+</p>
+
+<p>
+  <strong>Abstract:</strong>
+  <%= @registration.abstract %>
+</p>
+
+<p>
+  <strong>File upload:</strong>
+  <td><%= link_to "Download file", registration.file_upload.url(:original, false) %></td>
+</p>
+
+<%= link_to 'Back', registrations_path %>

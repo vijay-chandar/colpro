@@ -1,0 +1,57 @@
+<%= form_for(@registration) do |f| %>
+  <% if @registration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+
+      <ul>
+      <% @registration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :college_name %><br>
+    <%= f.text_field :college_name %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.select :department, options_for_select(Registration.departments.map{|x| [x[0], x[0]]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_number %><br>
+    <%= f.text_field :mobile_number %>
+  </div>
+  <div class="field">
+    <%= f.label :type_of_conference %><br>
+    <%= f.select :type_of_conference, options_for_select(Registration.type_of_conferences.map{|x| [x[0], x[0]]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :paper_title %><br>
+    <%= f.text_field :paper_title %>
+  </div>
+  <div class="field">
+    <%= f.label :abstract %><br>
+    <%= f.text_area :abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :file_upload %><br>
+    <%= f.file_field :file_upload %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
