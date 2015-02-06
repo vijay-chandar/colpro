@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :registrations, except: [:edit, :update, :destroy]
 
   get "registration_success" => "registrations#registration_success"
-
+  get "registrations" => "registrations#index"
   get "home" => "static_pages#home"
   get "call_for_papers" => "static_pages#call_for_papers"
   get "important_dates" => "static_pages#important_dates"
