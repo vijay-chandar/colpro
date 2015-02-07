@@ -4,11 +4,7 @@ gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-<<<<<<< HEAD
-# gem 'sqlite3'
-=======
-#gem 'sqlite3'
->>>>>>> aa9c1dc9d40e0e29bed6f480c39c15559b1a0d50
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
