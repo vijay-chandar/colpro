@@ -99,6 +99,7 @@
 		<%= yield %>
 
 
+   <div class="col-md-12">
 
   <footer>
 
@@ -119,10 +120,15 @@
       <div id="clustrmaps-widget"></div></a></noscript>
   <br><br><br>
 </div>
-
-<div class=" copyright"> Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a></div>
+<div class=" copyright"> Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a> 
+	<% if user_signed_in? %>
+	   <%= link_to "Log out",destroy_user_session_path, :method => :delete %>
+    <% else %>
+   	   <%= link_to "Log in",new_user_session_path %> 
+   	<% end %>
+</div>
   </footer><!-- End  footer  -->
-
+</div>
 
 	</body>
 </html>

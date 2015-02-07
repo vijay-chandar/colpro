@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :registrations, except: [:edit, :update, :destroy]
+  resources :users, except: [:create, :new, :edit]
 
   get "registration_success" => "registrations#registration_success"
   get "registrations" => "registrations#index"

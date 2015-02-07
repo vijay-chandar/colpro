@@ -1,6 +1,6 @@
 class RegistrationsController < ApplicationController
   before_action :set_registration, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, except: [:new, :create, :registration_success]
+  before_action :authenticate_user!, except: [:new, :create, :registration_success]
   # GET /registrations
   # GET /registrations.json
   def index
@@ -15,7 +15,7 @@ class RegistrationsController < ApplicationController
   # GET /registrations/new
   def new
     @registration = Registration.new
-  end
+  end 
 
   # # GET /registrations/1/edit
   # def edit
