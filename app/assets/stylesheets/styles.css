@@ -456,7 +456,7 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { margin-bottom: 1
 	font-size:14px;
 	}
 .topcontact li{
-	text-align:right;
+	text-align: right;
 	padding:7px 10px;
 	margin:5px 0px;
 	background-color:#000;
@@ -1253,7 +1253,7 @@ a.cat:hover, a.comm:hover, a.tag:hover { text-decoration:underline; }
 	position:relative;
 	text-decoration:none;
 	font-family:'socialicoz' !important;
-	text-align:center;
+	text-align: center;
 	font-size:25px;
 	background:#d9d9d9;
 	display:inline-block;
@@ -1767,7 +1767,7 @@ to { background-position: -800px 0; }
 	margin-left:20px;
 }
 .group h2 {
- text-align;
+ text-align: center;
 	display:block;
 	margin-bottom:19px;
 }
