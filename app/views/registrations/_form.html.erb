@@ -13,17 +13,17 @@
 
   <div class="field">
     <%= f.label :first_name %>&nbsp;&nbsp;&nbsp;<br>
-    <%= f.text_field :first_name,:size=> 30 %>
+    <%= f.text_field :first_name,:size=> 30, :placeholder => "Enter your First Name" %>
   </div>
   <div>  
     <%= f.label :last_name %>&nbsp;&nbsp;&nbsp;<br>
-    <%= f.text_field :last_name,:size=> 30  %>
+    <%= f.text_field :last_name,:size=> 30, :placeholder => "Enter your Second Name"  %>
   <!-- </div>
   <div class="field"> -->
   </div>
   <div class="field">
     <%= f.label :college_name %>&nbsp;&nbsp;&nbsp;<br>
-    <%= f.text_field :college_name,:size=> 30%>
+    <%= f.text_field :college_name,:size=> 30, :placeholder => "Enter your College Name"%>
   </div>
   <div class="field">
     <%= f.label :department %>&nbsp;&nbsp;&nbsp;<br>
@@ -31,11 +31,11 @@
   </div>
   <div class="field">
     <%= f.label :email %>&nbsp;&nbsp;&nbsp;<br>
-    <%= f.text_field :email,:size=> 30  %>
+    <%= f.text_field :email,:size=> 30, :placeholder => "Enter your email id"  %>
   </div>
   <div class="field">
     <%= f.label :mobile_number %>&nbsp;&nbsp;&nbsp;<br>
-    <%= f.text_field :mobile_number,:size=> 30  %>
+    <%= f.text_field :mobile_number,:size=> 30, :placeholder => "Enter your Mobile Number"  %>
   </div>
   <div class="field">
     <%= f.label :type_of_conference %>&nbsp;&nbsp;&nbsp;<br>
@@ -43,11 +43,11 @@
   </div>
   <div class="field">
     <%= f.label :paper_title %>&nbsp;&nbsp;&nbsp;<br>
-    <%= f.text_field :paper_title,:size=> 30  %>
+    <%= f.text_field :paper_title,:size=> 30, :placeholder => "Enter the Title of your Paper"  %>
   </div>
   <div class="field">
     <%= f.label :abstract %>&nbsp;&nbsp;&nbsp;<br>
-    <%= f.text_area :abstract ,:size=> "28" %>
+    <%= f.text_area :abstract ,:size=> "28", :placeholder => "Enter your Abstract here" %>
   </div>
   <div class="field">
     <%= f.label :file_upload %>&nbsp;&nbsp;&nbsp;<br>
