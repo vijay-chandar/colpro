@@ -141,13 +141,19 @@
       <div id="clustrmaps-widget"></div></a></noscript>
   <br><br><br>
 </div>
-<div class=" copyright"> Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a> 
+<div class=" copyright"> Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a>
+<!-- <font align="right"> -->
+<div class="col-md-12">
+<div class="col-md-11"></div>
+<div class="col-md-1">
 	<% if user_signed_in? %>
 	   <%= link_to "Log out",destroy_user_session_path, :method => :delete %>
     <% else %>
    	   <%= link_to "Log in",new_user_session_path %> 
    	<% end %>
-</div>
+   	</div>
+   </div>
+<!-- </font> -->
   </footer><!-- End  footer  -->
 </div>
 

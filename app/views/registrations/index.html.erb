@@ -30,7 +30,7 @@
         <td><%= registration.type_of_conference %></td>
         <td><%= registration.paper_title %></td>
         <td><%= registration.abstract %></td>
-        <td><%= link_to "Download file", registration.file_upload.url(:original, false) %></td>
+				<td><%= link_to "Download file", registration.file_upload.url(download: true) %></td>
         <td><%= link_to 'Show', registration %></td>
       </tr>
     <% end %>
