@@ -111,7 +111,7 @@ body {
 
   /* The navbar becomes detached from the top, so we round the corners */
   .navbar-wrapper .navbar {
-    border-radius: 20px;
+    border-radius: 05px;
   }
 
   /* Bump up size of carousel content */
