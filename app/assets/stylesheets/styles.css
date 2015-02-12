@@ -69,8 +69,8 @@
 sub, sup, small { font-size: 75%; }
 ol, ul { list-style: none; }
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-family: Verdana; 
+	font-size: 15px;
 	background-image: url(../images/bg.jpg);
 	color: #666666;
 }
@@ -435,7 +435,7 @@ img.alignleft, img.alignright, img.aligncenter, img.alignnone { margin-bottom: 1
 .inner.untop{ padding-top:0px; max-width: 100%; height: auto; vertical-align: middle;	}	
 .inner.unbottom{ padding-bottom:0px;	}	
 .inner.unleft{ padding-left:0px; max-width: 100%; height: auto; vertical-align: middle;	}	
-.inner.unright{ padding-right:0px;	}	
+.inner.unright{ padding-right:1px; font-family: Times; font-size: 20px;	}	
 .inner.untb{ padding:0px auto!important;	}	
 /*
 ------------------------------------------------------------
@@ -876,10 +876,11 @@ ul.list-services p {
 	-webkit-box-shadow:inset 5px 0px 15px #1a1a1a;
 	box-shadow:inset 0px 5px 45px #1a1a1a;
 	margin: 0;
+	font-family: Arial;
 }
 .ca-menu li {
 	width: 100%;
-	height: 75px;
+	height: 85px;
 	overflow: hidden;
 	position: relative;
 	display: block;
