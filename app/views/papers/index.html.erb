@@ -15,6 +15,7 @@
 
   <tbody>
     <% @papers.each do |paper| %>
+    <% if current_user.id == paper.user_id %>
       <tr>
         <td><%= paper.type_of_conference %></td>
         <td><%= paper.paper_title %></td>
@@ -32,6 +33,7 @@
           <% else %>
             <%= link_to 'Modify Paper V2', edit_paper_path(paper) %>
           <% end %>
+        <% end %>
         </td>          
       </tr>
     <% end %>
