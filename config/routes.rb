@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :registrations, except: [:edit, :update, :destroy]
-  resources :users, except: [:create, :new, :edit]
+  resources :papers, except: [:destroy, :show ]
 
-  get "registration_success" => "registrations#registration_success"
-  get "registrations" => "registrations#index"
+
+  devise_for :users
+  # resources :papers  
+  # resources :users
+
+  # t "registration_success" => "registrations#registration_success"
+  get "sign in" => "devise/sessions#new"
   get "home" => "static_pages#home"
   get "call_for_papers" => "static_pages#call_for_papers"
   get "important_dates" => "static_pages#important_dates"

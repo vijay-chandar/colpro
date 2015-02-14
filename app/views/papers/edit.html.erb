@@ -1,0 +1,9 @@
+<h1>Add Paper Version 2</h1>
+<%= form_for(@paper) do |f| %>
+<div class="field">
+    <%= f.label :Paper_Upload %><br>
+    <%= f.file_field :paper_version1 %>
+</div>
+<% end %>
+<%= link_to 'Show', @paper %> |
+<%= link_to 'Back', papers_path %>

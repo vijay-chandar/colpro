@@ -4,6 +4,16 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
@@ -20,10 +30,22 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+  <div class="field">
+    <%= f.label :mobile_number %><br />
+    <%= f.number_field :mobile_number %>
+  </div>
+  <div class="field">
+    <%= f.label :college_name %><br />
+    <%= f.text_field :college_name%>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br />
+    <%= f.select :department,options_for_select(User.departments.map{|x| [x[0], x[0]]}),:size=> 30 %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "users/shared/links" %>
