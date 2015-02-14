@@ -1,0 +1,32 @@
+<%= form_for(@paper) do |f| %>
+  <% if @paper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@paper.errors.count, "error") %> prohibited this paper from being saved:</h2>
+
+      <ul>
+      <% @paper.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type_of_conference %><br>
+    <%= f.select :type_of_conference, options_for_select(Paper.type_of_conferences.map{|x| [x[0], x[0]]}),:size=> 30 %>  </div>
+  <div class="field">
+    <%= f.label :paper_title %><br>
+    <%= f.text_field :paper_title %>
+  </div>
+  <div class="field">
+    <%= f.label :abstract %><br>
+    <%= f.text_area :abstract %>
+  </div>
+  <div class="field">
+    <%= f.label :Paper_Upload %><br>
+    <%= f.file_field :paper_version1 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

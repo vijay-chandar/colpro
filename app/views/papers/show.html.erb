@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type of conference:</strong>
+  <%= @paper.type_of_conference %>
+</p>
+
+<p>
+  <strong>Paper title:</strong>
+  <%= @paper.paper_title %>
+</p>
+
+<p>
+  <strong>Abstract:</strong>
+  <%= @paper.abstract %>
+</p>
+
+<%= link_to 'Edit', edit_paper_path(@paper) %> |
+<%= link_to 'Back', papers_path %>

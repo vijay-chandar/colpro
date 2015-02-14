@@ -36,12 +36,17 @@
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
                 <li><%= link_to "Home",home_path  %></li>
-								<li><%= link_to "Call for Papers", call_for_papers_path %></li>
+				<li><%= link_to "Call for Papers", call_for_papers_path %></li>
                 <li><%= link_to "Important Dates", important_dates_path %></li>
                 <li><%= link_to "Paper Ethics", paper_ethics_path %></li>
                 <li><%= link_to "Committee", committee_path %></li>
-                <li><%= link_to "Registration", new_registration_path %></li>
+               	<li><%= link_to "Upload your paper", papers_path %></li>	
                 <li><%= link_to "Venue and Contact", venue_and_contact_path %></li>
+                <% if user_signed_in? %>
+					<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+				<% else %>
+					<li><%= link_to "Log in/Register", new_user_session_path %></li>
+				<% end %>
 								<!-- <li><a href="important_dates">Important Dates</li> -->
 								<!-- <li><a href="paper_ethics">Paper Ethics</a></li> -->
 								<!-- <li><a href="committee">Committee</a></li> -->
@@ -68,66 +73,7 @@
 		</div>
 	
 
-		<!-- Carousel
-		================================================== -->
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>
-				<li data-target="#myCarousel" data-slide-to="4"></li>
-				<li data-target="#myCarousel" data-slide-to="5"></li>
-			</ol>
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<%= image_tag "slider/slide1.png" %>
-					<div class="container">
-						
-					</div>
-				</div>
-				<div class="item">
-					<%= image_tag "slider/slide5.png" %>
-          
-					<div class="container">
-					
-					</div>
-				</div>
-				<div class="item">
-					<%= image_tag "slider/slide6.png" %>
-					<div class="container">
-						
-					</div>
-				</div>
-				<div class="item">
-					<%= image_tag "slider/slide8.jpg" %>
-					<div class="container">
-						
-					</div>
-				</div>
-				<div class="item">
-					<%= image_tag "slider/slide9.jpg" %>
-					<div class="container">
-						
-					</div>
-				</div>
-				<div class="item">
-					<%= image_tag "slider/SLIDE7.jpg" %>
-					<div class="container">
-						
-					</div> 
-				</div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="width: 100px; opacity:-0.0px">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="width: 100px; opacity:-0.0px">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div><!-- /.carousel -->
+		 
 		<%= yield %>
 
 
