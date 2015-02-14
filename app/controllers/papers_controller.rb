@@ -10,12 +10,10 @@ class PapersController < ApplicationController
   end
 
   def show
-    respond_with(@paper)
   end
 
   def new
     @paper = Paper.new
-    respond_with(@paper)
   end
 
   def edit
@@ -26,12 +24,12 @@ class PapersController < ApplicationController
     @paper.save
     @paper.user_id = current_user.id
     @paper.save
-    respond_with(@paper)
+    redirect_to papers_path 
   end
 
   def update
     @paper.update(paper_params)
-    respond_with(@paper)
+    redirect_to papers_path 
   end
 
   def destroy

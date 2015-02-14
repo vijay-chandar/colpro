@@ -5,12 +5,16 @@ class ApplicationController < ActionController::Base
 
  protected
 	def after_sign_in_path_for(resource)
-    	papers_path
+    	selection_path
   	end
 	def after_sign_out_path_for(resource)
    		home_path 
   	end
   	def after_sign_in_path_for(resource)
-    	papers_path
+    	selection_path
   	end
+    def after_update_path_for(resource)
+      papers_path 
+    end
+
 end
