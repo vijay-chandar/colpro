@@ -7,7 +7,6 @@
     <tr>
       <th>Type of conference</th>
       <th>Paper title</th>
-      <th>Abstract</th>
       <th>Paper Version 1</th>
       <th>Paper Version 2</th>
       <th colspan="3"></th>
@@ -19,7 +18,6 @@
       <tr>
         <td><%= paper.type_of_conference %></td>
         <td><%= paper.paper_title %></td>
-        <td><%= paper.abstract %></td>
         <td><%= link_to "Paper v1", paper.paper_version1.url(download: true) %></td>
         <td>
           <% if paper.paper_version2_file_size != nil %>

@@ -16,4 +16,6 @@ class StaticPagesController < ApplicationController
 
   def venue_and_contact
   end
+  def selection
+  end
 end

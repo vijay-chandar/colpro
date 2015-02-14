@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # resources :users
 
   # t "registration_success" => "registrations#registration_success"
+  get "selection" => "static_pages#selection"
   get "sign in" => "devise/sessions#new"
   get "home" => "static_pages#home"
   get "call_for_papers" => "static_pages#call_for_papers"
