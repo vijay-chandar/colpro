@@ -1,4 +1,5 @@
 class Paper < ActiveRecord::Base
+	belongs_to :user
 	has_attached_file :paper_version1
 	has_attached_file :paper_version2
 	do_not_validate_attachment_file_type :paper_version1

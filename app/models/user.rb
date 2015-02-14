@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
   # do_not_validate_attachment_file_type :paper_version1,:paper_version2
   enum department: [ :CSE, :ECE, :EEE, :IT, :MECH, :CIVIL, :Others ]
   has_many :papers
+  has_one :payment_detail
 end

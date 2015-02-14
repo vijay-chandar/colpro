@@ -24,6 +24,16 @@ class PapersController < ApplicationController
     @paper.save
     @paper.user_id = current_user.id
     @paper.save
+    if @paper.save
+      @paper.paper_number = "C15#{@paper.user_id}-#{@paper.id}"
+      @paper.save
+      # RegistrationMailer.registration_success(@registration).deliver_now
+      # format.html { redirect_to papers_path, notice: 'Paper was successfully Uploaded.' }
+      # format.json { render :show, status: :created, location: @paper }
+    else
+      format.html { render :new }
+      format.json { render json: @registration.errors, status: :unprocessable_entity }
+    end
     redirect_to papers_path 
   end
 

@@ -1,45 +1,102 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Papers</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Type of conference</th>
-      <th>Paper title</th>
-      <th>Paper Version 1</th>
-      <th>Paper Version 2</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @papers.each do |paper| %>
-    <% if current_user.id == paper.user_id %>
+<% if current_user.email != "admin@sjit.com" %> 
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= paper.type_of_conference %></td>
-        <td><%= paper.paper_title %></td>
-        <td><%= link_to "Paper v1", paper.paper_version1.url(download: true) %></td>
-        <td>
-          <% if paper.paper_version2_file_size != nil %>
-            <%= link_to "Paper v2", paper.paper_version2.url(download: true) %>
-          <% else %>
-             NA
-          <% end %>
-        </td>
-        <td>
-          <% if paper.paper_version2_file_size == nil %>
-            <%= link_to 'Add Paper V2', edit_paper_path(paper) %>
-          <% else %>
-            <%= link_to 'Modify Paper V2', edit_paper_path(paper) %>
-          <% end %>
-        <% end %>
-        </td>          
+        <th>Paper Number</th>
+        <th>Type of conference</th>
+        <th>Paper title</th>
+        <th>Paper Version 1</th>
+        <th>Paper Version 2</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @papers.each do |paper| %>
+      <% if current_user.id == paper.user_id %>
+        <tr>
+          <td><%= paper.paper_number %></td>
+          <td><%= paper.type_of_conference %></td>
+          <td><%= paper.paper_title %></td> 
+          <td><%= link_to "Paper v1", paper.paper_version1.url(download: true) %></td>
+          <td>
+            <% if paper.paper_version2_file_size != nil %>
+              <%= link_to "Paper v2", paper.paper_version2.url(download: true) %>
+            <% else %>
+               NA
+            <% end %>
+          </td>
+          <td>
+            <% if paper.paper_version2_file_size == nil %>
+              <%= link_to 'Add Paper V2', edit_paper_path(paper) %>
+            <% else %>
+              <%= link_to 'Modify Paper V2', edit_paper_path(paper) %>
+            <% end %>
+          <% end %>
+          </td>          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Paper', new_paper_path %>
+  <br>
+
+  <%= link_to 'New Paper', new_paper_path %>
+<% else %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>college name</th>
+        <th>Designation</th>
+        <th>Mobile Number</th> 
+        <th>Paper Number </th>
+        <th>Type of conference</th>
+        <th>Paper title</th>
+        <th>Abstract</th>
+        <th>Paper Version 1</th>
+        <th>Paper Version 2</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @papers.each do |paper| %>
+        <tr>
+          <td><%= paper.user.first_name %></td>
+          <td><%= paper.user.last_name %></td>
+          <td><%= paper.user.email %></td>
+          <td><%= paper.user.college_name %></td>
+          <td><%= paper.user.designation %></td>
+          <td><%= paper.user.mobile_number %></td>
+          <td><%= paper.paper_number %></td>
+          <td><%= paper.type_of_conference %></td>
+          <td><%= paper.paper_title %></td> 
+          <td><%= paper.abstract %></td>
+          <td><%= link_to "Paper v1", paper.paper_version1.url(download: true) %></td>
+          <td>
+            <% if paper.paper_version2_file_size != nil %>
+              <%= link_to "Paper v2", paper.paper_version2.url(download: true) %>
+            <% else %>
+               NA
+            <% end %>
+          </td>
+          <td>
+            <% if paper.paper_version2_file_size == nil %>
+              <%= link_to 'Add Paper V2', edit_paper_path(paper) %>
+            <% else %>
+              <%= link_to 'Modify Paper V2', edit_paper_path(paper) %>
+            <% end %>
+          <% end %>
+          </td>          
+        </tr>
+    </tbody>
+  </table>
+
+  <br>
+<% end %>

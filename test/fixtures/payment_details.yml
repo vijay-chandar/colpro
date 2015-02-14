@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  dd_number: MyString
+  bank: MyString
+  branch: MyString
+
+two:
+  amount: 1
+  dd_number: MyString
+  bank: MyString
+  branch: MyString

@@ -44,8 +44,8 @@
     <%= f.text_field :college_name%>
   </div>
   <div class="field">
-    <%= f.label :department %><br />
-    <%= f.select :department,options_for_select(User.departments.map{|x| [x[0], x[0]]}),:size=> 30 %>
+    <%= f.label :designation %><br />
+    <%= f.text_field :designation %>
   </div>
 
   <div class="actions">

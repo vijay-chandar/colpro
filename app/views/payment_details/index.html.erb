@@ -1,0 +1,37 @@
+<% if admin_signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Payment Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Dd number</th>
+      <th>Bank</th>
+      <th>Branch</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payment_details.each do |payment_detail| %>
+      <tr>
+        <td><%= payment_detail.amount %></td>
+        <td><%= payment_detail.dd_number %></td>
+        <td><%= payment_detail.bank %></td>
+        <td><%= payment_detail.branch %></td>
+        <td><%= link_to 'Show', payment_detail %></td>
+        <td><%= link_to 'Edit', edit_payment_detail_path(payment_detail) %></td>
+        <td><%= link_to 'Destroy', payment_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Payment detail', new_payment_detail_path %>
+<% else %>
+  You are not Authorized
+<% end %>
