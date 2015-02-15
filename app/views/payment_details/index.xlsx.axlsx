@@ -1,0 +1,7 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Payment Details") do |sheet|
+  sheet.add_row ["User Number","First Name","Last Name","Email id","College Name or Company Name","Mobile Number", "Designation","DD Number","Bank Name", "Bank Branch", "Amount","DD Copy"] ## Header values of Excel
+  @payment_details.each do |payment_detail|
+    sheet.add_row [payment_detail.user_number,payment_detail.user.first_name,payment_detail.user.last_name,payment_detail.user.email,payment_detail.user.college_name,payment_detail.user.mobile_number,payment_detail.user.designation,payment_detail.dd_number,payment_detail.bank,payment_detail.branch,payment_detail.amount,payment_detail.dd_copy.url(download: true)]
+  end
+end
