@@ -98,6 +98,8 @@ a:hover {
 	text-decoration:none;
 	text-transform:capitalize;
 	color:#F30;
+	background-color: transparent;
+	color: #EB1EF0;
 }
 html{
 	width: 100%;
@@ -2970,11 +2972,13 @@ footer {
 	margin-top:45px;
 	font-size: 10px;
 	color: white;
-	background-color: #161415;
+	background-color: #000000;
 	-webkit-box-shadow: black 0px 10px 10px -10px inset;
 	-moz-box-shadow: black 0px 10px 10px -10px inset;
 	box-shadow: black 0px 10px 10px -10px inset;
-	padding: 5px;
+	padding: 7px;
+	border-radius: 7px;
+
 }
 footer .copyright {
 	color: #FFF;
