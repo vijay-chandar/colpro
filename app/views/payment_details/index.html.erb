@@ -1,37 +1,39 @@
-<% if admin_signed_in? %>
+<% if current_user.email != "admin@sjit.com" %>
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Payment Details</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Amount</th>
+      <th>Registration Number</th>
       <th>Dd number</th>
       <th>Bank</th>
       <th>Branch</th>
+      <th>Amount</th>
+      <th>DD Copy </th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @payment_details.each do |payment_detail| %>
+    <% if payment_detail.user_id == current_user.id %>
       <tr>
-        <td><%= payment_detail.amount %></td>
+        <td><%= payment_detail.user_number %></td>
         <td><%= payment_detail.dd_number %></td>
         <td><%= payment_detail.bank %></td>
         <td><%= payment_detail.branch %></td>
-        <td><%= link_to 'Show', payment_detail %></td>
-        <td><%= link_to 'Edit', edit_payment_detail_path(payment_detail) %></td>
-        <td><%= link_to 'Destroy', payment_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= payment_detail.amount %></td>
+        <td><%= link_to "download",payment_detail.dd_copy.url(download: true) %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Payment detail', new_payment_detail_path %>
 <% else %>
-  You are not Authorized
+  <%= link_to "Download Payment Details", payment_details_path(format: "xlsx") %>
 <% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150214151725) do
+ActiveRecord::Schema.define(version: 20150215074819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150214151725) do
     t.integer  "dd_copy_file_size"
     t.datetime "dd_copy_updated_at"
     t.integer  "user_id"
+    t.string   "user_number"
   end
 
   add_index "payment_details", ["user_id"], name: "index_payment_details_on_user_id", using: :btree

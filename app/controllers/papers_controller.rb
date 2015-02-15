@@ -6,7 +6,10 @@ class PapersController < ApplicationController
 
   def index
     @papers = Paper.all
-    respond_with(@papers)
+  respond_to do |format|
+      format.html
+      format.xlsx
+    end    
   end
 
   def show

@@ -1,4 +1,5 @@
 class Paper < ActiveRecord::Base
+	acts_as_xlsx
 	belongs_to :user
 	has_attached_file :paper_version1
 	has_attached_file :paper_version2

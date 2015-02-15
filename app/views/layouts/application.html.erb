@@ -41,11 +41,18 @@
 				<li><%= link_to "Call for Papers", call_for_papers_path %></li>
                 <li><%= link_to "Important Dates", important_dates_path %></li>
                 <li><%= link_to "Paper Ethics", paper_ethics_path %></li>
-                <li><%= link_to "Committee", committee_path %></li>
-               	<li><%= link_to "Upload your paper", papers_path %></li>	
+                <li><%= link_to "Committee", committee_path %></li>	
                 <li><%= link_to "Venue and Contact", venue_and_contact_path %></li>
                 <% if user_signed_in? %>
-					<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+	                <% if current_user.email != "admin@sjit.com" %>	
+	                	<li><%= link_to "Upload your paper", papers_path %></li>
+	                	<li><%= link_to "Event Registration", payment_details_path %></li>
+						<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+					<% else %>
+						<li><%= link_to "Download paper list", papers_path %></li>
+						<li><%= link_to "Download payment details", payment_details_path %></li>
+						<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+					<% end %>
 				<% else %>
 					<li><%= link_to "Log in/Register", new_user_session_path %></li>
 				<% end %>

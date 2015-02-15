@@ -1,7 +1,11 @@
 <% if user_signed_in? %>
-	<center><%= link_to "Paper Upload",papers_path %></center>
-	<center><%= link_to "Enter Payment Details",new_payment_detail_path %></center>
+	<% if current_user.email != "admin@sjit.com" %>
+		<center><%= link_to "Paper Upload",papers_path %></center>
+		<center><%= link_to "Enter Payment Details",new_payment_detail_path %></center>
+	<% else %>
+		<%= link_to "paper as excel", papers_path(format: "xlsx") %>
+		<%= link_to "Payment Details as Excel", payment_details_path(format: "xlsx") %>
+	<% end %>
 <% else %>
 	<h2>SIGN IN!</h2>
 <% end %>
-<%= check_box_tag 'accept' %>

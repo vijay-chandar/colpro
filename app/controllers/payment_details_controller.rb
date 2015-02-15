@@ -5,7 +5,10 @@ class PaymentDetailsController < ApplicationController
 
   def index
     @payment_details = PaymentDetail.all
-    respond_with(@payment_details)
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end  
   end
 
   def show
@@ -22,8 +25,18 @@ class PaymentDetailsController < ApplicationController
 
   def create
     @payment_detail = PaymentDetail.new(payment_detail_params)
+    @payment_detail.user_id = current_user.id
     @payment_detail.save
-    respond_with(@payment_detail)
+    if @payment_detail.save
+      @payment_detail.user_number = "C15#{@payment_detail.id}"
+      @payment_detail.save
+      # RegistrationMailer.registration_success(@registration).deliver_now
+      # format.html { redirect_to papers_path, notice: 'Paper was successfully Uploaded.' }
+      # format.json { render :show, status: :created, location: @paper }
+    else
+      # flash[:notice] = "Post successfully created"
+    end
+    redirect_to selection_path   
   end
 
   def update
@@ -42,6 +55,6 @@ class PaymentDetailsController < ApplicationController
     end
 
     def payment_detail_params
-      params.require(:payment_detail).permit(:amount, :dd_number, :bank, :branch)
+      params.require(:payment_detail).permit(:amount, :dd_number, :bank, :branch,:dd_copy)
     end
 end
