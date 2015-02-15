@@ -5,9 +5,17 @@ class PaymentDetailsController < ApplicationController
 
   def index
     @payment_details = PaymentDetail.all
-    respond_to do |format|
-      format.html
-      format.xlsx
+    if current_user.email != "admin@sjit.com"
+      if @payment_details.find_by_user_id(current_user.id)
+        
+      else
+        redirect_to new_payment_detail_path
+      end
+    else
+      respond_to do |format|
+        format.html
+        format.xlsx
+      end
     end  
   end
 
@@ -36,7 +44,7 @@ class PaymentDetailsController < ApplicationController
     else
       # flash[:notice] = "Post successfully created"
     end
-    redirect_to selection_path   
+    redirect_to papers_details_path   
   end
 
   def update
