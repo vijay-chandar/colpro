@@ -11,11 +11,16 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.number_field :amount %>
-  </div>
+  <br>
+  <b>
+  <% if current_user.designation == "PG Student"  %>
+    Amount Payable = Rs. 600 <br>
+  <% elsif current_user.designation == "Faculty Member" %>
+    Amount Payable = Rs. 800 <br>
+  <% elsif current_user.designation == "Delegates" %>
+    Amount Payable = Rs. 1000<br>
+  <% end %>
+  </b><br>
   <div class="field">
     <%= f.label :dd_number %><br>
     <%= f.text_field :dd_number %>

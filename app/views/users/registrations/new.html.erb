@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :designation %><br />
-    <%= f.text_field :designation %>
+    <%= f.select :designation, options_for_select(User.designations.map{|x| [x[0], x[0]]}),:size=> 30 %>
   </div>
 
   <div class="actions">
