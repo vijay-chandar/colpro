@@ -37,25 +37,25 @@
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-                <li><%= link_to "Home",home_path  %></li>
-				<li><%= link_to "Call for Papers", call_for_papers_path %></li>
-                <li><%= link_to "Important Dates", important_dates_path %></li>
-                <li><%= link_to "Paper Ethics", paper_ethics_path %></li>
-                <li><%= link_to "Committee", committee_path %></li>	
-                <li><%= link_to "Venue and Contact", venue_and_contact_path %></li>
+                <li><%= link_to "Home",home_path,class: "white"  %></li>
+				<li><%= link_to "Call for Papers", call_for_papers_path,class: "white" %></li>
+                <li><%= link_to "Important Dates", important_dates_path,class: "white" %></li>
+                <li><%= link_to "Paper Ethics", paper_ethics_path,class: "white" %></li>
+                <li><%= link_to "Committee", committee_path,class: "white" %></li>	
+                <li><%= link_to "Venue and Contact", venue_and_contact_path,class: "white" %></li>
                 <% if user_signed_in? %>
 	                <% if current_user.email != "admin@sjit.com" %>	
-	                	<li><%= link_to "Upload your paper", papers_path %></li>
-	                	<li><%= link_to "Event Registration", payment_details_path %></li>
-						<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+	                	<li><%= link_to "Upload your paper", papers_path,class: "white" %></li>
+	                	<li><%= link_to "Event Registration", payment_details_path,class: "white" %></li>
+						<li><%= link_to "Log out", destroy_user_session_path, :method => :delete,class: "white" %></li>
 					<% else %>
-						<li><%= link_to "Download paper list", papers_path %></li>
-						<li><%= link_to "Download payment details", payment_details_path %></li>
-						<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+						<li><%= link_to "Download paper list", papers_path,class: "white" %></li>
+						<li><%= link_to "Download payment details", payment_details_path,class: "white" %></li>
+						<li><%= link_to "Log out", destroy_user_session_path, :method => :delete,class: "white" %></li>
 					<% end %>
 				<% else %>
-					<li><%= link_to "Log in", new_user_session_path %></li>
-					<li><%= link_to "Register", new_user_registration_path %></li>
+					<li><%= link_to "Log in", new_user_session_path,class: "white" %></li>
+					<li><%= link_to "Register", new_user_registration_path,class: "white" %></li>
 				<% end %>
 								<!-- <li><a href="important_dates">Important Dates</li> -->
 								<!-- <li><a href="paper_ethics">Paper Ethics</a></li> -->
