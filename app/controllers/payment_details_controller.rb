@@ -3,7 +3,7 @@ class PaymentDetailsController < ApplicationController
   before_action :authenticate_user! 
   respond_to :html
 
-  def index
+  def index 
     @payment_details = PaymentDetail.all
     if current_user.email != "admin@sjit.com"
       if @payment_details.find_by_user_id(current_user.id)
@@ -25,6 +25,7 @@ class PaymentDetailsController < ApplicationController
 
   def new
     @payment_detail = PaymentDetail.new
+
     respond_with(@payment_detail)
   end
 
@@ -34,6 +35,13 @@ class PaymentDetailsController < ApplicationController
   def create
     @payment_detail = PaymentDetail.new(payment_detail_params)
     @payment_detail.user_id = current_user.id
+    if current_user.designation == "PG Student"  
+      @payment_detail.amount = 600
+    elsif current_user.designation == "Faculty Member" 
+      @payment_detail.amount = 800
+    elsif current_user.designation == "Delegates" 
+      @payment_detail.amount = 1000
+    end
     @payment_detail.save
     if @payment_detail.save
       @payment_detail.user_number = "C15#{@payment_detail.id}"
