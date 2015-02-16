@@ -44,7 +44,7 @@ class PaymentDetailsController < ApplicationController
     else
       # flash[:notice] = "Post successfully created"
     end
-    redirect_to papers_details_path   
+    redirect_to payment_details_path   
   end
 
   def update
