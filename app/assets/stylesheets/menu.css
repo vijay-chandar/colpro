@@ -23,6 +23,7 @@
   visibility: hidden;
   line-height: 0;
   height: 0;
+  color: #ffffff;
 }
 #cssmenu #menu-button {
   display: none;
@@ -53,7 +54,7 @@
   float: right;
 }
 #cssmenu > ul > li > a {
-  padding: 16px 20px;
+  padding: 17px 41px;
   font-size: 14px;
   color: #ffffff;
   letter-spacing: 1px;
@@ -70,13 +71,14 @@
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  text-align: center;
 }
 #cssmenu > ul > li.active > a {
   color: #ffffff;
 }
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li > a:hover {
-  color: #F00;
+  color: #FFF;
   background : #000
   -webkit-transform: rotateX(90deg) translateY(-23px);
   -moz-transform: rotateX(90deg) translateY(-23px);
@@ -94,8 +96,8 @@
   width: 100%;
   height: 100%;
   padding: 16px 20px;
-  color: #dff2fa;
-  background: #19799f;
+  color: #FFF;
+  background: #F00;
   content: attr(data-title);
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
@@ -110,6 +112,7 @@
 }
 #cssmenu > ul > li:hover > a::before,
 #cssmenu > ul > li > a:hover::before {
+  color: #FFF;
   background: #F00;
 }
 #cssmenu.small-screen {
@@ -128,7 +131,7 @@
 }
 #cssmenu.small-screen > ul > li:hover > a,
 #cssmenu.small-screen > ul > li > a:hover {
-  color: #dff2fa;
+  color: #ffffff;
   -webkit-transform: none;
   -moz-transform: none;
   transform: none;
@@ -146,7 +149,7 @@
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: #3db2e1;
+  background: #000;
 }
 #cssmenu.small-screen #menu-button:after {
   content: "";
@@ -161,10 +164,12 @@
   border-bottom: 2px solid #ffffff;
   width: 22px;
   height: 3px;
+  color: #ffffff;
 }
 #cssmenu.small-screen #menu-button.menu-opened:after {
-  border-top: 2px solid #dff2fa;
-  border-bottom: 2px solid #dff2fa;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  color: #FFF;
 }
 #cssmenu.small-screen #menu-button:before {
   content: "";
@@ -174,8 +179,10 @@
   display: block;
   width: 22px;
   height: 2px;
-  background: #ffffff;
+  background: #F00;
+  color: #FFF;
 }
 #cssmenu.small-screen #menu-button.menu-opened:before {
-  background: #dff2fa;
+  background: #000;
+  color: #FFF;
 }
