@@ -18,4 +18,11 @@ class StaticPagesController < ApplicationController
   end
   def selection
   end
+  def download_doc
+  send_file(
+    "#{Rails.root}/public/ieee_format.doc",
+    filename: "ieee_format.doc",
+    type: "application/doc"
+  )
+  end
 end

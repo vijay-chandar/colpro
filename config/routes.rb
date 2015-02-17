@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :admins, except: [:new, :edit, :create]
 
   # t "registration_success" => "registrations#registration_success"
+  get "download_doc" => "static_pages#download_doc"
   get "selection" => "static_pages#selection"
   get "sign in" => "devise/sessions#new"
   get "home" => "static_pages#home"
