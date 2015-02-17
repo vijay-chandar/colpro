@@ -6,7 +6,7 @@
 #cssmenu #menu-button {
   margin: 0;
   padding: 0;
-  border: 0;
+  border: 0px;
   list-style: none;
   line-height: 1;
   display: block;
@@ -14,6 +14,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  color: #ffffff;
+  border-radius: 14px;
 }
 #cssmenu:after,
 #cssmenu > ul:after {
@@ -35,12 +37,14 @@
 }
 #cssmenu > ul {
   background: #000;
+  margin-bottom: 1px;
 }
 #cssmenu > ul > li {
   float: left;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   perspective: 1000px;
+  color: #ffffff;
 }
 #cssmenu.align-center > ul {
   font-size: 0;
@@ -84,6 +88,8 @@
   -moz-transform: rotateX(90deg) translateY(-23px);
   transform: rotateX(90deg) translateY(-23px);
   -ms-transform: none;
+  text-transform: inherit;
+  border-radius: 15px;
 }
 
 #cssmenu > ul > li > a::before {
@@ -115,6 +121,7 @@
 #cssmenu > ul > li > a:hover::before {
   color: #FFF;
   background: #F00;
+ border-radius: 15px; 
 }
 #cssmenu.small-screen {
   width: 100%;
