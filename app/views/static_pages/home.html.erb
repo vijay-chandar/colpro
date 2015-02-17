@@ -1,4 +1,115 @@
-<!-- Webfonts -->
+<!-- Webfonts --><style>
+.oval-quotes {
+  position:relative;
+  width:400px;
+  height:350px;
+  margin:2em auto 10px;
+  color:#000;
+  background:#ffed26;
+  /* css3 */
+  /*
+  NOTES:
+  -webkit-border-radius:Apx Bpx; // produces oval in safari 4 and chrome 4
+  -webkit-border-radius:Apx / Bpx; // produces oval in chrome 4 (again!) but not supported in safari 4
+  Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
+  */
+  -webkit-border-top-left-radius:400px 350px;
+  -webkit-border-top-right-radius:400px 350px;
+  -webkit-border-bottom-right-radius:400px 350px;
+  -webkit-border-bottom-left-radius:400px 350px;
+  -moz-border-radius:400px / 350px;
+  border-radius:400px / 350px;
+}
+
+/* creates opening quotation mark */
+.oval-quotes:before {
+  content:"\201C";
+  position:absolute;
+  z-index:1;
+  top:20px;
+  left:20px;
+  font:80px/1 Georgia, serif;
+  color:#ffed26;
+}
+
+/* creates closing quotation mark */
+.oval-quotes:after {
+  content:"\201D";
+  position:absolute;
+  z-index:1;
+  bottom:0;
+  right:20px;
+  font:80px/0.25 Georgia, serif;
+  color:#ffed26;
+}
+
+.oval-quotes p {
+	font-family:Arial / Helvetica ;
+  width:250px;
+  height:250px;
+  padding:50px 0 0;
+  margin:0 auto;
+  text-align:center;
+  font-size:20px;
+
+}
+
+/* creates smaller curve */
+.oval-quotes p:before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  bottom:-30px;
+  right:55%;
+  width:180px; /* wider than necessary to make it look a bit better in IE8 */
+  height:60px;
+  background:#fff; /* need this for webkit - bug in handling of border-radius */
+  /* css3 */
+  -webkit-border-bottom-right-radius:40px 50px;
+  -moz-border-radius-bottomright:40px 50px;
+  border-bottom-right-radius:40px 50px;
+  /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+  -webkit-transform:translate(-30px, -2px);
+  -moz-transform:translate(-30px, -2px);
+  -ms-transform:translate(-30px, -2px);
+  -o-transform:translate(-30px, -2px);
+  transform:translate(-30px, -2px);
+}
+
+/* creates larger curve */
+.oval-quotes p:after {
+  content:"";
+  position:absolute;
+  z-index:-2;
+  bottom:-30px;
+  right:25%;
+  height:80px;
+  border-right:200px solid #ffed26;
+  background:#ffed26; /* need this for webkit - bug in handling of border-radius */
+  /* css3 */
+  -webkit-border-bottom-right-radius:200px 100px;
+  -moz-border-radius-bottomright:200px 100px;
+  border-bottom-right-radius:200px 100px;
+  /* using translate to avoid undesired appearance in CSS2.1-capabable but CSS3-incapable browsers */
+  -webkit-transform:translate(0, -2px);
+  -moz-transform:translate(0, -2px);
+  -ms-transform:translate(0, -2px);
+  -o-transform:translate(0, -2px);
+  transform:translate(0, -2px);
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+.oval-quotes + p {
+  position:relative; /* part of the IE8 width compromise */
+  width:150px;
+  margin:0 0 2em;
+  font-size:18px;
+  font-weight:bold;
+}
+</style>
+
 <link type="text/css" rel="stylesheet" href='http://fonts.googleapis.com/css?family=Ubuntu:300italic,300,700'/>
 <!-- Carousel
 		================================================== -->
@@ -109,69 +220,29 @@
 		</div><!-- /inner -->
 	</div><!-- /span8 bg-white -->
 
-	<div class="col-md-4 bg-black">
-		<!--Header Title-->
- 		 <div class="clearfix"></div>
+	
+                <header></header>
+                <div class="content" style="float:right;padding-right:40px;padding-top:30px">
+                    <h2></h2>
+                    
+                    <blockquote class="oval-quotes">
+                        <br>
+                        <p>Conference Date: <br>5th April 2014<br><br>
+                        Conference Venue:<br><a href="#">St.Joseph's Institute of Technology</a><br><br>
+                        Conference Brochure:<br><a href="#">Click Here</a></p>
+                         			
 
-
-		<!-- /Customer - menu  --> 
-		<ul class="ca-menu bg-gray">
-			<li>
-				<a href="#">
-
-					<div class="ca-content">
-						<span class="ca-main">Conference Date</span><br>
-						<p style="font-size:20px; margin-left:-30px"><b>&nbsp&nbspApril 5th, 2014</b></p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-
-					<div class="ca-content1">
-						<span class="ca-main">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConference Venue</span><br>
-						<p style="font-size:15px" align=center><b>&nbsp&nbsp&nbspSt.Joseph's Institute of Technology,<br> Chennai</b></p>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-
-					<div class="ca-content">
-						<span class="ca-main">Conference Brochure</span><br>
-						<p style="font-size:20px; margin-left:13px"><b>click here</b></p>
-					</div>
-				</a>
-			</li>
-		</ul>  <!-- /ca-menu  --> 
-
-		<!--Header Title-->
-
-		<br>		<!--FeatuedBox -->
-		<div> </div>
-		<div>
-			
-				<div class="imgShow" align="center" >
-					<!--<div class="ribbon-wrapper right"><div class="ribbon">From $99</div></div>-->
-					<%= link_to image_tag("smiling_brunette.jpg",class: "zoom"),"http://stjosephstechnology.ac.in",class: "zoom" %>
-					<!--<a href="http://isrjournals.org/" target="_blank" class="zoom">
-						<img src="images/thumbnail-1.jpg" class="zoom"   alt="thumbnail" width="100%" />
-					</a>-->
-				</div> 
-                <br>
-               
-				  <!-- End Class featuedBox  -->
-		</div>
+                    </blockquote>
+                    <p></p>
+                    
+                </div>
+                <p></p>
+                <p class="follow"></p>
+            </div>
 
  
 
-	<!-- 	<div class="socialmedia">
-			<a class="social-item googleplus" href="www.google.co.in" title="find us googleplus">g</a>
-			<a class="social-item facebook" href="www.facebook.com" title="find us facebook">f</a>
-			<a class="social-item twitter" href="www.twitter.com" title="find us twitter">t</a>
-			<a class="social-item youtube" href="www.youtube.com" title="find us youtube">y</a>			
-		</div>
- -->
+	
 
 	</div> <!-- /span4 bg-black -->
 
