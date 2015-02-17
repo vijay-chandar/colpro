@@ -33,7 +33,7 @@
   line-height: 1;
 }
 #cssmenu > ul {
-  background: #3db2e1;
+  background: #000;
 }
 #cssmenu > ul > li {
   float: left;
@@ -57,9 +57,9 @@
   font-size: 14px;
   color: #ffffff;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: none;
   text-decoration: none;
-  background: #3db2e1;
+  background: #000;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
@@ -72,11 +72,12 @@
   transform-style: preserve-3d;
 }
 #cssmenu > ul > li.active > a {
-  color: #dff2fa;
+  color: #ffffff;
 }
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li > a:hover {
-  color: #dff2fa;
+  color: #F00;
+  background : #000
   -webkit-transform: rotateX(90deg) translateY(-23px);
   -moz-transform: rotateX(90deg) translateY(-23px);
   transform: rotateX(90deg) translateY(-23px);
@@ -109,7 +110,7 @@
 }
 #cssmenu > ul > li:hover > a::before,
 #cssmenu > ul > li > a:hover::before {
-  background: #3db2e1;
+  background: #F00;
 }
 #cssmenu.small-screen {
   width: 100%;
