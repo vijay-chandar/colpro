@@ -23,6 +23,7 @@
   visibility: hidden;
   line-height: 0;
   height: 0;
+
 }
 #cssmenu #menu-button {
   display: none;
@@ -83,6 +84,7 @@
   transform: rotateX(90deg) translateY(-23px);
   -ms-transform: none;
 }
+
 #cssmenu > ul > li > a::before {
   position: absolute;
   top: 100%;
