@@ -8,7 +8,7 @@
         breakpoint: 768,
         sticky: false
       }, options);
-     
+
       return this.each(function() {
         cssmenu.find('li ul').parent().addClass('has-sub');
         if (settings.format != 'select') {
@@ -103,8 +103,8 @@ $(document).ready(function() {
   });
 
   $("#cssmenu a").each(function() {
-  	var linkTitle = $(this).text();
-  	$(this).attr('data-title', linkTitle);
+    var linkTitle = $(this).text();
+    $(this).attr('data-title', linkTitle);
   });
 });
 
