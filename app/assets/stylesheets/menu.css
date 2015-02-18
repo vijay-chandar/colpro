@@ -83,7 +83,7 @@
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li > a:hover {
   color: #FFF;
-  background : #000
+  background: #000;
   -webkit-transform: rotateX(90deg) translateY(-23px);
   -moz-transform: rotateX(90deg) translateY(-23px);
   transform: rotateX(90deg) translateY(-23px);

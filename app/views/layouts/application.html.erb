@@ -16,14 +16,14 @@
 <body>
 <table>
 		<tr>
-		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to image_tag("sjit.png",alt: "SJIT", size:"130x155"), "http://stjosephstechnology.ac.in" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to image_tag("sjit.png",alt: "SJIT", size:"130x155"), "http://stjosephstechnology.ac.in" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 		<td>
 			<p>
 				<h3 class="header"><center> St. Joseph's Institute Of Technology<br>
 											<small>OMR, Chennai-119.</small>  </center>
 				<h3 class="header"><center>2<sup>nd</sup> National Conference On Recent Trends In Engineering and Technology </center></h3>
 					</h3></td> 
-		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to image_tag("Untitled.png"),home_path %></td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to image_tag("Untitled.png"),home_path %></td>
 		</tr>
 		</table>
 	<br>
@@ -56,22 +56,11 @@
 		<%= yield %>
 		<div class="col-md-12">
 <footer>
-<div align="left" style="margin-left:50px; margin-top:25px">
-<noscript><a href="http://www.histats.com/" target="_blank"><img src="../sstatic1.histats.com/01af5.gif?2213193&amp;101" alt="free tracking" border="0"></a></noscript>
-</div>
-<!-- BEGIN: Powered by Supercounters.com -->
-<div align="center" style="margin-top:-25px">
-</div>
-<!-- END: Powered by Supercounters.com -->
-<div align="right" style="margin-top:-35px; margin-right:25px">
-<div id="clustrmaps-widget"></div></a></noscript>
-<br><br><br>
-</div>
-<div class=" copyright"> Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a>
+
+<div style="color: #FFF;
+	padding:5px;height:25px"><font style="font-size:20px;float:left;padding-left:20px">Crafted with <font style="color:red;font-size:25px">&hearts;</font> by ROR crew </font><font style="float:right;font-size:20px;padding-right:500px">Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a></font>
 <!-- <font align="right"> -->
-<div class="col-md-12">
-<div class="col-md-11"></div>
-<div class="col-md-1">
+
 <% if user_signed_in? %>
 <%= link_to "Log out",destroy_user_session_path, :method => :delete %>
 <% end %>
