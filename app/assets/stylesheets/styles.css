@@ -112,6 +112,10 @@ html{
 		Blockquote
 ------------------------------------------------------------
 */
+
+
+
+
 blockquote {
 	margin:10px 0 0px 0px;
 	padding:5px 10px 0px 40px;
@@ -2983,5 +2987,5 @@ footer {
 footer .copyright {
 	color: #FFF;
 	padding: 5px 0;
-	text-align: center;
+	
 }

@@ -1,196 +1,106 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Capriola);
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
-#cssmenu ul li a,
-#cssmenu #menu-button {
+#cssmenu ul li a {
   margin: 0;
   padding: 0;
-  border: 0px;
+  border: 0;
   list-style: none;
   line-height: 1;
   display: block;
   position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #ffffff;
-  border-radius: 14px;
-}
-#cssmenu:after,
-#cssmenu > ul:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-  color: #ffffff;
-}
-#cssmenu #menu-button {
-  display: none;
+  font-family: Capriola, Helvetica, sans-serif;
 }
 #cssmenu {
   width: auto;
-  font-family: Raleway, sans-serif;
-  line-height: 1;
+  height: 59px;
+  padding-bottom: 4px;
 }
-#cssmenu > ul {
-  background: #000;
-  margin-bottom: 1px;
-}
-#cssmenu > ul > li {
-  float: left;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  perspective: 1000px;
-  color: #ffffff;
-}
-#cssmenu.align-center > ul {
-  font-size: 0;
-  text-align: center;
-}
-#cssmenu.align-center > ul > li {
-  display: inline-block;
-  float: none;
-}
-#cssmenu.align-right > ul > li {
+#cssmenu.align-right {
   float: right;
 }
-#cssmenu > ul > li > a {
-  padding: 17px 41px;
-  font-size: 14px;
-  color: #ffffff;
-  letter-spacing: 1px;
-  text-transform: none;
+#cssmenu.align-right ul li {
+  float: right;
+  margin-right: 0;
+  margin-left: 4px;
+}
+#cssmenu.align-right ul li:first-child,
+#cssmenu.align-right ul li:first-child > a {
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one,
+#cssmenu #bg-two,
+#cssmenu #bg-three,
+#cssmenu #bg-four {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#cssmenu #bg-one {
+  height: 10px;
+  background: #0f71ba;
+}
+#cssmenu #bg-two {
+  height: 59px;
+  z-index: 2;
+  background: url('images/bg.png');
+}
+#cssmenu #bg-three {
+  bottom: 4px;
+  height: 55px;
+  z-index: 3;
+  background: #222222;
+  background: -moz-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #555555 0%, #222222 100%);
+  background: linear-gradient(to bottom, #555555 0%, #222222 100%);
+}
+#cssmenu #bg-four {
+  bottom: 4px;
+  height: 55px;
+  z-index: 4;
+  background: url('images/bg.png');
+}
+#cssmenu ul {
+  height: 59px;
+}
+#cssmenu ul li {
+  float: left;
+  margin-right: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  z-index: 5;
+}
+#cssmenu ul li a {
+  padding: 24px 30px 20px 30px;
+  margin-bottom: 4px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #eeeeee;
+  font-size: 15px;
   text-decoration: none;
-  background: #000;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  text-align: center;
 }
-#cssmenu > ul > li.active > a {
+#cssmenu ul li:first-child,
+#cssmenu ul li:first-child > a {
+  border-bottom-left-radius: 3px;
+}
+#cssmenu ul li:hover,
+#cssmenu ul li.active {
+  background: #0f71ba;
+  background: -moz-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fa4f0), color-stop(100%, #0f71ba));
+  background: -webkit-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -o-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: -ms-linear-gradient(top, #3fa4f0 0%, #0f71ba 100%);
+  background: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
+}
+#cssmenu ul li a:hover,
+#cssmenu ul li.active > a {
+  background: url('images/bg.png');
   color: #ffffff;
-}
-#cssmenu > ul > li:hover > a,
-#cssmenu > ul > li > a:hover {
-  color: #FFF;
-  background: #000;
-  -webkit-transform: rotateX(90deg) translateY(-23px);
-  -moz-transform: rotateX(90deg) translateY(-23px);
-  transform: rotateX(90deg) translateY(-23px);
-  -ms-transform: none;
-  text-transform: inherit;
-  border-radius: 15px;
-}
-
-#cssmenu > ul > li > a::before {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: -1;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 16px 20px;
-  color: #FFF;
-  background: #F00;
-  content: attr(data-title);
-  -webkit-transition: background 0.3s;
-  -moz-transition: background 0.3s;
-  transition: background 0.3s;
-  -webkit-transform: rotateX(-90deg);
-  -moz-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -ms-transform: translateY(- -18px);
-}
-#cssmenu > ul > li:hover > a::before,
-#cssmenu > ul > li > a:hover::before {
-  color: #FFF;
-  background: #F00;
- border-radius: 15px; 
-}
-#cssmenu.small-screen {
-  width: 100%;
-}
-#cssmenu.small-screen > ul,
-#cssmenu.small-screen.align-center > ul {
-  width: 100%;
-  text-align: left;
-}
-#cssmenu.small-screen > ul > li,
-#cssmenu.small-screen.align-center {
-  float: none;
-  display: block;
-  border-top: 1px solid rgba(100, 100, 100, 0.1);
-}
-#cssmenu.small-screen > ul > li:hover > a,
-#cssmenu.small-screen > ul > li > a:hover {
-  color: #ffffff;
-  -webkit-transform: none;
-  -moz-transform: none;
-  transform: none;
-  -ms-transform: none;
-}
-#cssmenu.small-screen > ul > li > a::before {
-  display: none;
-}
-#cssmenu.small-screen #menu-button {
-  display: block;
-  padding: 16px 20px;
-  cursor: pointer;
-  font-size: 14px;
-  text-decoration: none;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: #000;
-}
-#cssmenu.small-screen #menu-button:after {
-  content: "";
-  position: absolute;
-  right: 20px;
-  top: 17px;
-  display: block;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  border-top: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  width: 22px;
-  height: 3px;
-  color: #ffffff;
-}
-#cssmenu.small-screen #menu-button.menu-opened:after {
-  border-top: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  color: #FFF;
-}
-#cssmenu.small-screen #menu-button:before {
-  content: "";
-  position: absolute;
-  right: 20px;
-  top: 27px;
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #F00;
-  color: #FFF;
-}
-#cssmenu.small-screen #menu-button.menu-opened:before {
-  background: #000;
-  color: #FFF;
 }
