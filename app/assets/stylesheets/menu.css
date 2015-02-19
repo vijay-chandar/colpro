@@ -29,7 +29,7 @@
 }
 #cssmenu {
   width: auto;
-  border: 3px solid #aaa;
+  border: 3px solid #121212;
   border-radius: 3px;
   font-family: 'Oswald', sans-serif;
   line-height: 1;
@@ -58,7 +58,7 @@
   font-size: 14px;
   text-transform: none;
   text-decoration: none;
-  color: #aaa;
+  color:white;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -112,7 +112,7 @@
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #aaa;
+  color: #121212;
   background: url('images/bg.png');
 }
 #cssmenu.small-screen #menu-button.menu-opened {
@@ -127,8 +127,8 @@
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border-top: 2px solid #aaa;
-  border-bottom: 2px solid #aaa;
+  border-top: 2px solid #121212;
+  border-bottom: 2px solid #121212;
   width: 18px;
   height: 3px;
 }
@@ -144,7 +144,7 @@
   display: block;
   width: 18px;
   height: 2px;
-  background: #aaa;
+  background: #121212;
 }
 #cssmenu.small-screen #menu-button.menu-opened:before {
   background: #fd8a17;
