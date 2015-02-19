@@ -16,6 +16,9 @@
    <title>National Conference On Recent Trends In Engineering and Technology 15' | St. Joseph's Institute Of Technology</title>
 </head>
 <body>
+<% if user_signed_in? %>
+	<p align="right" font-size="40px">Hi! ,<%= current_user.first_name %>&nbsp;&nbsp;&nbsp;</p>
+<%end%> 
 <table>
 		<tr>
 		<td style="padding-left:100px"><%= link_to image_tag("sjit.png",alt: "SJIT", size:"130x155"), "http://stjosephstechnology.ac.in" %></td>

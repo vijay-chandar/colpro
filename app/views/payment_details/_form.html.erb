@@ -34,10 +34,11 @@
     <%= f.text_field :branch %>
   </div>
   <div class="field">
-    <%= f.label :DD_scan_copy %><br>
+    <%= f.label "DD_scan_copy" %> <font style="color:red">*</font><br>
     <%= f.file_field :dd_copy %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit"%>
   </div>
+  <font style="color:red">*</font>  scan copy should be less than 1mb
 <% end %>

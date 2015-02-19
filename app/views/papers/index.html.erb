@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 <% if current_user.email != "admin@sjit.com" %>
-<h1>Listing Papers</h1>
+<h1>Uploaded Papers</h1>
   <table class="table">
     <thead>
       <tr>
         <th>Paper Number</th>
         <th>Type of conference</th>
         <th>Paper title</th>
-        <th>Paper Version 1</th>
-        <th>Paper Version 2</th>
+        <th>Full Paper</th>
+        <th>Edited Paper</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -20,19 +20,19 @@
           <td><%= paper.paper_number %></td>
           <td><%= paper.type_of_conference %></td>
           <td><%= paper.paper_title %></td> 
-          <td><%= link_to "Paper v1", paper.paper_version1.url(download: true) %></td>
+          <td><%= link_to "Full Paper", paper.paper_version1.url(download: true) %></td>
           <td>
             <% if paper.paper_version2_file_size != nil %>
-              <%= link_to "Paper v2", paper.paper_version2.url(download: true) %>
+              <%= link_to "Edited Paper", paper.paper_version2.url(download: true) %>
             <% else %>
                NA
             <% end %>
           </td>
           <td>
             <% if paper.paper_version2_file_size == nil %>
-              <%= link_to 'Add Paper V2', edit_paper_path(paper) %>
+              <%= link_to 'Add Edited Paper', edit_paper_path(paper) %>
             <% else %>
-              <%= link_to 'Modify Paper V2', edit_paper_path(paper) %>
+              <%= link_to 'Modify Edited Paper', edit_paper_path(paper) %>
             <% end %>
           <% end %>
           </td>          
@@ -42,7 +42,7 @@
   </table>
 
   <br>
-  <%= link_to 'New Paper', new_paper_path, id: "col" %>
+  <%= link_to 'Uplaod Paper', new_paper_path, id: "col" %>
 <%else%>
-  <%= link_to "Download payment details",papers_path(format: "xlsx") %>
+  <%= link_to "Download paper details",papers_path(format: "xlsx") %>
 <% end %>
