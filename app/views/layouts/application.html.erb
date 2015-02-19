@@ -13,7 +13,7 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
    
-   <title>Ncert2015</title>
+   <title>National Conference On Recent Trends In Engineering and Technology 15' | St. Joseph's Institute Of Technology</title>
 </head>
 <body>
 <table>
@@ -34,7 +34,7 @@
                 <li><%= link_to "Home",home_path %></li>
 				<li><%= link_to "Call for Papers", call_for_papers_path %></li>
                 <li><%= link_to "Important Dates", important_dates_path %></li>
-                <li><%= link_to "Paper Ethics", paper_ethics_path %></li>
+               <!-- <li><%= link_to "Paper Ethics", paper_ethics_path %></li> -->
                 <li><%= link_to "Committee", committee_path %></li>	
                 <li><%= link_to "Venue and Contact", venue_and_contact_path %></li>
                 <% if user_signed_in? %>
@@ -57,10 +57,10 @@
 
 		<%= yield %>
 		<div class="col-md-12">
-<footer>
-
+<footer><br>
 <div style="color: #FFF;
-	padding:5px;height:20px"><font style="font-size:10px;float:left;padding-left:20px;">Crafted with <font style="color:red;font-size:20px">&hearts;</font> by ROR crew </font><font style="float:right;font-size:10px;padding-right:600px">Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a></font>
+	padding:5px;height:20px"><font style="font-size:13px;float:left;padding-left:20px;">Crafted with <font style="color:red;font-size:20px">&hearts;</font> by ROR crew </font>&nbsp;&nbsp;&nbsp;<font style="float:right;font-size:13px;padding-right:550px">Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a></font> 
+<!--<font style="float:right; padding-right:45px;">Crafted Using <%= image_tag "rails.png",size:"30x30" %></font>-->
 
 </div>
 	
