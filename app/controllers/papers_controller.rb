@@ -6,10 +6,18 @@ class PapersController < ApplicationController
 
   def index
     @papers = Paper.all
-  respond_to do |format|
-      format.html
-      format.xlsx
-    end    
+    if current_user.email != "admin@sjit.com"
+      if @papers.find_by_user_id(current_user.id)
+
+       else
+        redirect_to new_paper_path
+      end
+    else
+      respond_to do |format|
+        format.html
+        format.xlsx
+      end 
+    end  
   end
 
   def show
