@@ -16,12 +16,12 @@
    <title>Ncert2015</title>
 </head>
 <body>
-<table >
+<table>
 		<tr>
-		<td style="padding-left:200px"><%= link_to image_tag("sjit.png",alt: "SJIT", size:"130x155"), "http://stjosephstechnology.ac.in" %></td>
+		<td style="padding-left:100px"><%= link_to image_tag("sjit.png",alt: "SJIT", size:"130x155"), "http://stjosephstechnology.ac.in" %></td>
 		<td>
 			<p ><center>
-				<h1 class="header"> St. Joseph's Institute Of Technology</h1></center><br><h3>
+				<h2 class="header"> St. Joseph's Institute Of Technology</h2></center><h3>
 				<small><center>OMR, Chennai-119.</center></small></h3>  </p>
 				<p><h3 class="header"><center>2<sup>nd</sup> National Conference On Recent Trends In Engineering and Technology </center></h3>
 				</p>	</td> 
@@ -48,7 +48,7 @@
 						<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
 					<% end %>
 				<% else %>
-					<li><%= link_to "Sign Up / Log in", new_user_session_path %></li>
+					<li><%= link_to "Log in/Register", new_user_session_path %></li>
 					
 				<% end %>
 								
