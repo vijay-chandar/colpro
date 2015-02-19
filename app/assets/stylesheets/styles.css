@@ -2981,7 +2981,8 @@ footer {
 	-moz-box-shadow: black 0px 10px 10px -10px inset;
 	box-shadow: black 0px 10px 10px -10px inset;
 	padding: 7px;
-	border-radius: 7px;
+	border-radius: 8px;
+	height: 52px;
 
 }
 footer .copyright {

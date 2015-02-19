@@ -21,7 +21,7 @@
 <%end%> 
 <table>
 		<tr>
-		<td style="padding-left:100px"><%= link_to image_tag("sjit.png",alt: "SJIT", size:"130x155"), "http://stjosephstechnology.ac.in" %></td>
+		<td style="padding-left:100px"><%= link_to image_tag("clglogo.png",alt: "SJIT", size:"150x155"), "http://stjosephstechnology.ac.in" %></td>
 		<td>
 			<p ><center>
 				<h2 class="header"> St. Joseph's Institute Of Technology</h2></center><h3>
@@ -36,8 +36,12 @@
 <ul>
                 <li><%= link_to "Home",home_path %></li>
 				<li><%= link_to "Call for Papers", call_for_papers_path %></li>
+<<<<<<< HEAD
+                <li><%= link_to "Important Dates", important_dates_path %></li>	
+=======
                 <li><%= link_to "Important Dates", important_dates_path %></li>
                <!-- <li><%= link_to "Paper Ethics", paper_ethics_path %></li> -->
+>>>>>>> b250e68b64711c124b64b4176085342447af7ebc
                 <li><%= link_to "Committee", committee_path %></li>	
                 <li><%= link_to "Venue and Contact", venue_and_contact_path %></li>
                 <li><%= link_to "Instructions", selection_path %>
