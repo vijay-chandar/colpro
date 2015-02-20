@@ -33,6 +33,7 @@ gem "letter_opener", :group => :development
 gem 'pg'
 gem 'rails_12factor', group: :production
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass', '~> 3.3.3'
