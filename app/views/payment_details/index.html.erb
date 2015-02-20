@@ -11,7 +11,7 @@
       <th>Bank</th>
       <th>Branch</th>
       <th>Amount</th>
-      <th>DD Copy </th>
+      <!-- <th>DD Copy </th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,7 +25,6 @@
         <td><%= payment_detail.bank %></td>
         <td><%= payment_detail.branch %></td>
         <td><%= payment_detail.amount %></td>
-        <td><%= link_to "download",payment_detail.dd_copy.url(download: true) %></td>
       </tr>
     <% end %>
     <% end %>
