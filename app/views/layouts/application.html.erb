@@ -13,34 +13,34 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
    
-   <title>National Conference On Recent Trends In Engineering and Technology 15' | St. Joseph's Institute Of Technology</title>
+   <title>National Conference on Recent Trends In Engineering and Technology 15' | St. Joseph's Institute of Technology</title>
 </head>
 <body>
 <% if user_signed_in? %>
 	<p align="right" font-size="40px">Hi! ,<%= current_user.first_name %>&nbsp;&nbsp;&nbsp;</p>
-<%end%> 
-<table>
+<%end%> <center>
+<table style="padding:20px">
 		<tr>
-		<td style="padding-left:100px"><%= link_to image_tag("sjit.png",alt: "SJIT", size:"130x155"), "http://stjosephstechnology.ac.in" %></td>
-		<td>
-			<p ><center>
-				<h2 class="header"> St. Joseph's Institute Of Technology</h2></center><h3>
+		<td style="background-color:white;width:150px"><%= link_to image_tag("sjit.png",alt: "SJIT", size:"130x155"), "http://stjosephstechnology.ac.in" %></td>
+		<td style="background-color:white">
+			<p >
+				<h2 align="center"> St. Joseph's Institute of Technology</h2></center><h3>
 				<small><center>OMR, Chennai-119.</center></small></h3>  </p>
-				<p><h3 class="header"><center>2<sup>nd</sup> National Conference On Recent Trends In Engineering and Technology </center></h3>
+				<p><h3 align="center"><center>2<sup>nd</sup> National Conference<br> on<br> Recent Trends in Engineering and Technology </h3>
 				</p>	</td> 
-		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to image_tag("Untitled.png"),home_path %></td>
+		<td style="background-color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to image_tag("Untitled.png"),home_path %></td>
 		</tr>
-		</table>
+		</table></center>
 	<br>
 <div id='cssmenu'>
 <ul>
                 <li><%= link_to "Home",home_path %></li>
-				<li><%= link_to "Call for Papers", call_for_papers_path %></li>
+				<li><%= link_to "Info Log", call_for_papers_path %></li>
                 <li><%= link_to "Important Dates", important_dates_path %></li>
                <!-- <li><%= link_to "Paper Ethics", paper_ethics_path %></li> -->
                 <li><%= link_to "Committee", committee_path %></li>	
                 <li><%= link_to "Venue and Contact", venue_and_contact_path %></li>
-                <li><%= link_to "Instructions", selection_path %>
+               
                 <% if user_signed_in? %>
 	                <% if current_user.email != "admin@sjit.com" %>	
 	                	<li><%= link_to "Upload your paper", papers_path %></li>
@@ -63,7 +63,7 @@
 		<div class="col-md-12">
 <footer><br>
 <div style="color: #FFF;
-	padding:5px;height:20px"><font style="font-size:13px;float:left;padding-left:20px;">Crafted with <font style="color:red;font-size:20px">&hearts;</font> by ROR crew </font>&nbsp;&nbsp;&nbsp;<font style="float:right;font-size:13px;padding-right:550px">Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a></font> 
+	padding:5px;height:20px">&nbsp;&nbsp;&nbsp;<font style="float:right;font-size:13px;padding-right:550px">Copyright &copy; <a href="http://www.stjosephstechnology.ac.in/">St.joseph's Institute Of Technology</a></font> 
 <!--<font style="float:right; padding-right:45px;">Crafted Using <%= image_tag "rails.png",size:"30x30" %></font>-->
 
 </div>

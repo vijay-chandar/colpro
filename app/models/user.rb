@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   # has_attached_file :paper_version1,:paper_version2
   # do_not_validate_attachment_file_type :paper_version1,:paper_version2
-  enum designation: [ "PG Student", "Faculty Member", "Delegates" ]
+  enum designation: [ "Student", "Faculty Member", "Delegates" ]
   has_many :papers
   has_one :payment_detail
 end
