@@ -205,7 +205,6 @@ GEM
       json (~> 1.4)
     responders (2.0.2)
       railties (>= 4.2.0.alpha, < 5)
-    ruby (0.1.0)
     rubyzip (1.0.0)
     sass (3.4.11)
     sass-rails (5.0.1)
@@ -270,7 +269,6 @@ DEPENDENCIES
   pg
   rails (= 4.2.0)
   rails_12factor
-  ruby
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
