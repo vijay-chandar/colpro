@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # t "registration_success" => "registrations#registration_success"
   get "download_doc" => "static_pages#download_doc"
   get "selection" => "static_pages#selection"
-  get "sign in" => "devise/sessions#new"
+  get "sign_in" => "devise/sessions#new"
   get "home" => "static_pages#home"
   get "call_for_papers" => "static_pages#call_for_papers"
   get "important_dates" => "static_pages#important_dates"
