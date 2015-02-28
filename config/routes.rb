@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :admins, except: [:new, :edit, :create]
 
   # t "registration_success" => "registrations#registration_success"
+  get "credits" => "static_pages#credits"
   get "download_doc" => "static_pages#download_doc"
   get "selection" => "static_pages#selection"
   get "sign_in" => "devise/sessions#new"
@@ -19,6 +20,8 @@ Rails.application.routes.draw do
   get "paper_ethics" => "static_pages#paper_ethics"
   get "committee" => "static_pages#committee"
   get "venue_and_contact" => "static_pages#venue_and_contact"
+    get "download_pdf" => "static_pages#download_pdf"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
