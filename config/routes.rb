@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get "paper_ethics" => "static_pages#paper_ethics"
   get "committee" => "static_pages#committee"
   get "venue_and_contact" => "static_pages#venue_and_contact"
-    get "download_pdf" => "static_pages#download_pdf"
+  get "download_pdf" => "static_pages#download_pdf"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
