@@ -16,11 +16,11 @@
     <%= f.select :type_of_conference, options_for_select(Paper.type_of_conferences.map{|x| [x[0], x[0]]}),:size=> 30 %>  </div>
   <div class="field">
     <%= f.label :paper_title %><br>
-    <%= f.text_field :paper_title %>
+    <%= f.text_field :paper_title,size:50 %>
   </div>
   <div class="field">
     <%= f.label :abstract %><br>
-    <%= f.text_area :abstract %>
+    <%= f.text_area :abstract,size:'50x10' %>
   </div>
   <div class="field">
     <%= f.label "Full Paper" %><br>

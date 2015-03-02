@@ -9,17 +9,17 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name,"First Name" %><br />
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name,"Last Name" %><br />
     <%= f.text_field :last_name %>
   </div>
 
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email,"Email Id" %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -36,11 +36,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label :mobile_number %><br />
+    <%= f.label :mobile_number,"Mobile Number" %><br />
     <%= f.number_field :mobile_number %>
   </div>
   <div class="field">
-    <%= f.label "College/ Organisation Name" %><br />
+    <%= f.label "College/ Organisation Name","College or Organisation Name" %><br />
     <%= f.text_field :college_name%>
   </div>
   <div class="field">
