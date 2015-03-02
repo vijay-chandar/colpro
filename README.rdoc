@@ -1,4 +1,6 @@
 Project Prodigy
 ==========================
 This is a site for a conference in our college. We have built this site with ruby on rails , html , css and jQuery.
-This site was built by Vijay Chandar, Syed Moinudeen and Survesh Jones. 
+This site was built by Team Prodigy.
+
+
