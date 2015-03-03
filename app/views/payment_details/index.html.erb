@@ -34,5 +34,46 @@
 <br>
 
 <% else %>
-  <%= link_to "Download Payment Details", payment_details_path(format: "xlsx") %>
+  <h1>Listing Payment Details</h1>
+  <%= link_to "Export", payment_details_path(format: "xlsx") %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Registration Number</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>E-mail Id</th>
+      <th>College Name</th>
+      <th>Mobile Number</th>
+      <th>Designation</th>
+      <th>Dd number</th>
+      <th>Bank</th>
+      <th>Branch</th>
+      <th>Amount</th>
+      <th>DD Copy </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payment_details.each do |payment_detail| %>
+    
+      <tr>
+        <td><%= payment_detail.user_number %></td>
+        <td><%= payment_detail.user.first_name %></td>
+        <td><%= payment_detail.user.last_name %></td>
+        <td><%= payment_detail.user.email %></td>
+        <td><%= payment_detail.user.college_name %></td>
+        <td><%= payment_detail.user.mobile_number %></td>
+        <td><%= payment_detail.user.designation %></td>
+        <td><%= payment_detail.dd_number %></td>
+        <td><%= payment_detail.bank %></td>
+        <td><%= payment_detail.branch %></td>
+        <td><%= payment_detail.amount %></td>
+        <td><%= link_to "Download", payment_detail.dd_copy.url(download: true) %></td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
 <% end %>

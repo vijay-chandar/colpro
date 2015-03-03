@@ -1,7 +1,7 @@
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Papers") do |sheet|
-  sheet.add_row ["First Name","Last Name","Email id","College Name or Company Name","Mobile Number", "Designation","Type of Conference","Paper id", "Paper Title", "Abstract","Paper Version 1","Paper Version 2"] ## Header values of Excel
+  sheet.add_row ["Paper id","First Name","Last Name","Email id","College Name or Company Name","Mobile Number", "Designation","Type of Conference","Paper Title", "Abstract","Paper Version 1","Paper Version 2"] ## Header values of Excel
   @papers.each do |paper|
-    sheet.add_row [paper.user.first_name,paper.user.last_name,paper.user.email,paper.user.college_name,paper.user.mobile_number,paper.user.designation,paper.type_of_conference,paper.paper_number, paper.paper_title, paper.abstract, paper.paper_version1.url(download: true),paper.paper_version1.url(download: true)]
+    sheet.add_row [paper.paper_number,paper.user.first_name,paper.user.last_name,paper.user.email,paper.user.college_name,paper.user.mobile_number,paper.user.designation,paper.type_of_conference, paper.paper_title, paper.abstract, paper.paper_version1.url(download: true),paper.paper_version1.url(download: true)]
   end
 end
