@@ -62,6 +62,7 @@
     </thead>
     <tbody>
         <tr>
+          <% @papers.each do |paper| %>
           <td><%= paper.paper_number %></td>
           <td><%= paper.user.first_name %></td>
           <td><%= paper.user.last_name %></td>
@@ -82,4 +83,5 @@
      </tr>
      </tbody>
      </table> 
+<% end %>
 <% end %>
