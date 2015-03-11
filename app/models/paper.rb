@@ -12,7 +12,7 @@ class Paper < ActiveRecord::Base
 	# before_post_process :transliterate_file_name
 	do_not_validate_attachment_file_type :paper_version1
 	do_not_validate_attachment_file_type :paper_version2
-	enum type_of_conference: [ "CSE & IT", "ECE & EEE", "MECH & CIVIL" ] 
+	enum type_of_conference: [ "CSE & IT", "ECE", "EEE", "MECH & CIVIL" ] 
 	private
 		# def transliterate_file_name
 		#   extension = Paper.extname(local_file_name).gsub(/^\.+/, '')
