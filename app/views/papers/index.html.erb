@@ -19,10 +19,10 @@
           <td><%= paper.paper_number %></td>
           <td><%= paper.type_of_conference %></td>
           <td><%= paper.paper_title %></td> 
-          <td><%= link_to "Download", paper.paper_version1.url(download: true) %></td>
+          <td><%= link_to "#{paper.paper_version1_file_name}", paper.paper_version1.url(download: true) %></td>
           <td>
             <% if paper.paper_version2_file_size != nil %>
-              <%= link_to "Download", paper.paper_version2.url(download: true) %>
+              <%= link_to "#{paper.paper_version2_file_name}", paper.paper_version2.url(download: true) %>
             <% else %>
                NA
             <% end %>
@@ -61,8 +61,8 @@
       </tr>
     </thead>
     <tbody>
+        <% @papers.each do |paper| %>
         <tr>
-          <% @papers.each do |paper| %>
           <td><%= paper.paper_number %></td>
           <td><%= paper.user.first_name %></td>
           <td><%= paper.user.last_name %></td>
@@ -80,8 +80,8 @@
                NA
             <% end %>
           </td>
+          <% end %>
      </tr>
      </tbody>
      </table> 
-<% end %>
 <% end %>
