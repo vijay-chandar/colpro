@@ -43,7 +43,7 @@
                 <li><%= link_to "Venue and Contact", venue_and_contact_path %></li>
                
                 <% if user_signed_in? %>
-	                <% if current_user.email != "admin@sjit.com" %>	
+	                <% if current_user.email != "admin@ncrtet2015.com" %>	
 	                	<li><%= link_to "Upload your paper", papers_path %></li>
 	                	<li><%= link_to "Event Registration", payment_details_path %></li>
 						<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
