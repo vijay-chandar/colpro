@@ -1,4 +1,4 @@
-<% if current_user.email != "admin@sjit.com" %>
+<% if current_user.email != "admin@ncrtet2015.com" %>
 <p id="notice"><%= notice %></p>
 <h1>Uploaded Papers</h1>
   <table class="table">
@@ -44,6 +44,14 @@
 <% else %>
   <h1>Uploaded Papers</h1>
   <%= link_to "Export",papers_path(format: "xlsx") %>
+  <%= form_tag("/papers", method: "get", by_type_of_conference: 1) do %>
+  <%= label_tag(:q, "Type of Conference") %>
+  <%= select_tag "by_type_of_conference", "<option value=0>CSE & IT</option><option value=1>ECE</option><option value=2>EEE</option><option value=3>MECH & CIVIL</option>".html_safe %>
+  <%= submit_tag("FILTER") %>
+<% end %>
+  
+  <%# link_to "Ruby on Rails search", controller: "papers", by_type_of_conference: 1 %>
+    
   <table class="table">
     <thead>
       <tr>

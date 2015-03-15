@@ -1,12 +1,14 @@
 class PapersController < ApplicationController
   before_action :set_paper, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
+  
+  has_scope :featured, :type => :boolean
+  has_scope :by_type_of_conference
   respond_to :html
 
   def index
-    @papers = Paper.all
-    if current_user.email != "admin@sjit.com"
+    @papers = apply_scopes(Paper).all
+    if current_user.email != "admin@ncrtet2015.com"
       if @papers.find_by_user_id(current_user.id)
 
        else

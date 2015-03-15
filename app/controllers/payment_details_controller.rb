@@ -5,7 +5,7 @@ class PaymentDetailsController < ApplicationController
 
   def index 
     @payment_details = PaymentDetail.all
-    if current_user.email != "admin@sjit.com"
+    if current_user.email != "admin@ncrtet2015.com"
       if @payment_details.find_by_user_id(current_user.id)
         
       else
