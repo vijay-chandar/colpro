@@ -1,9 +1,9 @@
 class Paper < ActiveRecord::Base
 	acts_as_xlsx
 	belongs_to :user
-	paginates_per 10
 	scope :featured, -> { where(:featured => true) }
 	scope :by_type_of_conference, -> type_of_conference { where(:type_of_conference => type_of_conference) }
+	paginates_per 10
 	has_attached_file :paper_version1,
 	:storage => :dropbox,
 	:dropbox_credentials => Rails.root.join("config/dropbox.yml"),

@@ -7,7 +7,7 @@ class PapersController < ApplicationController
   respond_to :html
 
   def index
-    @papers = apply_scopes(Paper).all
+    @papers = apply_scopes(Paper).all.page params[:page]
     if current_user.email != "admin@ncrtet2015.com"
       if @papers.find_by_user_id(current_user.id)
 
@@ -15,7 +15,6 @@ class PapersController < ApplicationController
         redirect_to new_paper_path
       end
     else
-      @papers = Paper.order(:id).page params[:page]
       respond_to do |format|
         format.html
         format.xlsx
