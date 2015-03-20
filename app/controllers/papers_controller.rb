@@ -15,6 +15,7 @@ class PapersController < ApplicationController
         redirect_to new_paper_path
       end
     else
+      @papers = Paper.order(:id).page params[:page]
       respond_to do |format|
         format.html
         format.xlsx
