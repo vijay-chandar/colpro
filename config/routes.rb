@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :payment_details, except: [:show, :destroy, :uppdate,:edit ]
+  resources :payment_details, except: [:show, :destroy, :update,:edit ]
 
-  resources :papers, except: [:destroy, :show ]
+  resources :papers, except: [:destroy, :show, :new, :create ]
 
 
   devise_for :users

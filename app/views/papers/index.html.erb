@@ -26,21 +26,14 @@
             <% else %>
                NA
             <% end %>
-          </td>
-          <td>
-            <% if paper.paper_version2_file_size == nil %>
-              <%= link_to 'Add Edited Paper', edit_paper_path(paper) %>
-            <% else %>
-              <%= link_to 'Modify Edited Paper', edit_paper_path(paper) %>
-            <% end %>
-          </td>          
+          </td>         
         </tr>
       <% end %>
       <% end %>
     </tbody>
   </table>
   <br>
-  <%= link_to 'Upload Paper', new_paper_path, id: "col" %>
+  Sorry! The Last Date to Upload your paper is over!
 <% else %>
   <h1>Uploaded Papers</h1>
   <%= link_to "Export",papers_path(format: "xlsx") %>
