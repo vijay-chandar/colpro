@@ -35,7 +35,7 @@ class PaymentDetailsController < ApplicationController
   def create
     @payment_detail = PaymentDetail.new(payment_detail_params)
     @payment_detail.user_id = current_user.id
-    if current_user.designation == "PG Student"  
+    if current_user.designation == "Student"  
       @payment_detail.amount = 600
     elsif current_user.designation == "Faculty Member" 
       @payment_detail.amount = 800

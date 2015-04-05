@@ -12,7 +12,7 @@ class PapersController < ApplicationController
       if @papers.find_by_user_id(current_user.id)
 
        else
-        redirect_to new_paper_path
+        # redirect_to new_paper_path
       end
     else
       respond_to do |format|
