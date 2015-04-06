@@ -26,14 +26,24 @@
             <% else %>
                NA
             <% end %>
-          </td>         
-        </tr>
-      <% end %>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  Sorry! The Last Date to Upload your paper is over!
+          </td>
+          <td>
+            <% if paper.paper_version2_file_size == nil %>    
+               <%= link_to 'Add Paper V2', edit_paper_path(paper) %>
+            <% else %>
+                <%= link_to 'Modify Paper V2', edit_paper_path(paper) %>
+            <% end %>
+            <% end %>
+        </td>
+      </tr>
+    <% end %>
+</tbody>
+</table>
+<br>
+<center><%= paginate @papers %></center>
+<%= link_to 'New Paper', new_paper_path, id: "col" %><br>
+
+
 <% else %>
   <h1>Uploaded Papers</h1>
   <%= link_to "Export",papers_path(format: "xlsx") %>
@@ -43,7 +53,7 @@
   <%= submit_tag("FILTER") %>
 <% end %>
   
-  <%# link_to "Ruby on Rails search", controller: "papers", by_type_of_conference: 1 %>
+  <%# link_to "Ruby on Rails search", controller: "papers", xby_type_of_conference: 1 %>
     
   <table class="table">
     <thead>

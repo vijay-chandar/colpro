@@ -2,12 +2,12 @@ Rails.application.routes.draw do
 
   resources :payment_details, except: [:show, :destroy, :update,:edit ]
 
-  resources :papers, except: [:destroy, :show, :new, :create ]
+  resources :papers, except: [:destroy, :show ]
 
 
   devise_for :users
   # resources :papers  
-  resources :admins, except: [:new, :edit, :create]
+  # resources :admins, except: [:new, :edit, :create]
 
   # t "registration_success" => "registrations#registration_success"
   get "credits" => "static_pages#credits"
